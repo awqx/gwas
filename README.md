@@ -1,2 +1,2 @@
 # gwas
-GWAS functions
+*R Package for GWAS functions*
