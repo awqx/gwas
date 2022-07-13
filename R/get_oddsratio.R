@@ -12,7 +12,7 @@
 #' @export
 get_oddsratio <- function(x, y) {
   or_list <- oddsratio(x, y)
-  data.frame(
+  df <- data.frame(
     or = or_list$measure[2, "estimate"],
     or_lower = or_list$measure[2, "lower"],
     or_upper = or_list$measure[2, "upper"],
@@ -20,4 +20,5 @@ get_oddsratio <- function(x, y) {
     chisq = or_list$p.value[2, "chi.square"],
     midp = or_list$p.value[2, "midp.exact"]
   )
+  df
 }

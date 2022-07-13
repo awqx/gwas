@@ -1,9 +1,9 @@
-#' Helper functions for log_catch lists
+#' Helper functions for message catching lists
 #'
 #' After a [msg_catch()] product function has been used with `lapply()`,
 #' the results, warning, and errors can be resorted into separate lists.
 #'
-#' @param x the output from `lapply()` with [msg_catch()]. Is a list of lists of the form `list(res, warn = w, err = e)`
+#' @param x the output from `lapply()` with [msg_catch()]. A list of lists of the form `list(res, warn = w, err = e)`
 #'
 #' @export
 msg_catch_relist <- function(x) {
@@ -19,7 +19,11 @@ msg_catch_relist <- function(x) {
 	list(res = res_list, warn = warn_list, err = err_list)
 }
 
-#' @describeIn relist_helper a helper function that remakes a list based on a given subset name. Only used for message (warnings and errors).
+#' @describeIn msg_catch_relist
+#' Helper for relisting
+#'
+#' A helper function that remakes a list based on a given subset name. Only used for message (warnings and errors).
+#'
 #' @param x an output from using `lapply()` and a [msg_catch()] function
 #' @param x_subset the name of the subset to make into a new list
 #' @param msg_label an optional character string to start each entry
