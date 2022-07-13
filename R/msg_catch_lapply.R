@@ -2,9 +2,7 @@
 #'
 #' Integration of `msg_catch` and `lapply`. Basically a wrapper for `lapply`
 #' paplied to a `msg_catch` function, followed by a `msg_catch_relist` and
-#' optional `write_log`.
-#'
-#' Make sure functions passed to `fun` output a `data.frame` that can be passed
+#' optional `write_log`. Make sure functions passed to `fun` output a `data.frame` that can be passed
 #' to `rbind`.
 #'
 #' @param fun the function to be passed to `msg_catch`
@@ -17,10 +15,10 @@
 #'
 #' @export
 msg_catch_lapply <- function(fun, X, logfile = NULL, ...) {
-  new_fun <- gwas::log_catch(fun)
+  new_fun <- msg_catch(fun)
 
   fun_list <- lapply(X, FUN = new_fun, ...) %>%
-    log_catch_relist()
+    msg_catch_relist()
 
   temp <- names(fun_list$res)
   fun_list$res <- do.call(rbind, fun_list$res) %>%
