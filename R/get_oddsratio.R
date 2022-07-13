@@ -7,7 +7,7 @@
 #' @param x the predictor vector, binary
 #' @param y the outcome vector, binary
 #'
-#' @return Single row data frame that can be used with [msg_catch_lapply()].
+#' @return Single row data frame that can be used with [msg_catch_lapply()]
 #'
 #' @export
 get_oddsratio <- function(x, y) {

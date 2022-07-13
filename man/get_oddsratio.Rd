@@ -12,7 +12,7 @@ get_oddsratio(x, y)
 \item{y}{the outcome vector, binary}
 }
 \value{
-Single row data frame that can be used with \code{\link[=msg_catch_lapply]{msg_catch_lapply()}}.
+Single row data frame that can be used with \code{\link[=msg_catch_lapply]{msg_catch_lapply()}}
 }
 \description{
 Given a gene, wraps \code{epitools::oddsratio} to return the odds ratio
