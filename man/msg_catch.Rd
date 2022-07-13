@@ -14,5 +14,5 @@ msg_catch(fun)
 \description{
 Converts a function into a tryCatch version that records status messages.
 Taken from Martin Morgan's answer to https://stackoverflow.com/questions/4948361/.
-\code{msg_catch_lapply} is identical except the tryCatch also applies a \code{lapply}.
+\code{\link[=msg_catch_lapply]{msg_catch_lapply()}} wraps this with a \code{lapply()} and \code{\link[=msg_catch_relist]{msg_catch_relist()}}.
 }

@@ -7,9 +7,9 @@
 msg_catch_lapply(fun, X, logfile = NULL, ...)
 }
 \arguments{
-\item{fun}{the function to be passed to \code{msg_catch}}
+\item{fun}{the function to be passed to \code{\link[=msg_catch]{msg_catch()}}}
 
-\item{X}{the argument to \code{lapply} over}
+\item{X}{the argument to \code{lapply()} over}
 
 \item{logfile}{leave \code{NULL} to not log. Otherwise, a character string/connection to the log file.}
 
@@ -20,11 +20,11 @@ list \code{fun_list(res, warn, err)} that contains a \code{data.frame} of result
 a character vector of warnings, and a chr vector of errors.
 }
 \description{
-Integration of \code{msg_catch} and \code{lapply}. Basically a wrapper for \code{lapply}
-paplied to a \code{msg_catch} function, followed by a \code{msg_catch_relist} and
-optional \code{write_log}.
+Integration of \code{\link[=msg_catch]{msg_catch()}} and \code{lapply()}. Wraps together a \code{lapply()} that
+takes a \code{\link[=msg_catch]{msg_catch()}} function and a \code{\link[=msg_catch_relist]{msg_catch_relist()}}.
+Optional \code{logfile} argument can call \code{\link[=write_log]{write_log()}}.
 }
 \details{
-Make sure functions passed to \code{fun} output a \code{data.frame} that can be passed
-to \code{rbind}.
+Make sure functions passed to \code{fun} have an output that can be passed to \code{rbind()},
+such as a single row a \code{data.frame}.
 }

@@ -7,11 +7,11 @@
 write_log(x, f)
 }
 \arguments{
-\item{x}{the output from a \code{msg_catch_relist} call. Requires errors to be a character vector under \code{.$err} and warnings to be a vector under \code{.$warn}.}
+\item{x}{the output from a \code{\link[=msg_catch_relist]{msg_catch_relist()}} call. Requires errors to be a character vector under \code{.$err} and warnings to be a vector under \code{.$warn}.}
 
 \item{f}{character string or file location of the log file.}
 }
 \description{
-After messages have been caught by a \code{msg_catch} function, this function will
+After messages have been caught by a \code{\link[=msg_catch]{msg_catch()}} function, this function will
 write warnings and errors into a text file.
 }

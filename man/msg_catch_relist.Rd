@@ -7,9 +7,9 @@
 msg_catch_relist(x)
 }
 \arguments{
-\item{x}{the output from \code{lapply} with \code{log_catch}. Is a list of lists of the form \code{list(res, warn = w, err = e)}}
+\item{x}{the output from \code{lapply()} with \code{\link[=msg_catch]{msg_catch()}}. Is a list of lists of the form \code{list(res, warn = w, err = e)}}
 }
 \description{
-After a \code{msg_catch} product function has been used with \code{lapply},
+After a \code{\link[=msg_catch]{msg_catch()}} product function has been used with \code{lapply()},
 the results, warning, and errors can be resorted into separate lists.
 }

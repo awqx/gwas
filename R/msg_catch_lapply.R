@@ -1,12 +1,14 @@
 #' Message catching over a list
 #'
-#' Integration of `msg_catch` and `lapply`. Basically a wrapper for `lapply`
-#' paplied to a `msg_catch` function, followed by a `msg_catch_relist` and
-#' optional `write_log`. Make sure functions passed to `fun` output a `data.frame` that can be passed
-#' to `rbind`.
+#' Integration of [msg_catch()] and `lapply()`. Wraps together a `lapply()` that
+#' takes a [msg_catch()] function and a [msg_catch_relist()].
+#' Optional `logfile` argument can call [write_log()].
 #'
-#' @param fun the function to be passed to `msg_catch`
-#' @param X the argument to `lapply` over
+#' Make sure functions passed to `fun` have an output that can be passed to `rbind()`,
+#' such as a single row a `data.frame`.
+#'
+#' @param fun the function to be passed to [msg_catch()]
+#' @param X the argument to `lapply()` over
 #' @param logfile leave `NULL` to not log. Otherwise, a character string/connection to the log file.
 #' @param ... additional arguments to be passed to `fun`
 #'
