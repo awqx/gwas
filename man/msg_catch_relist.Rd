@@ -2,28 +2,14 @@
 % Please edit documentation in R/msg_catch_relist.R
 \name{msg_catch_relist}
 \alias{msg_catch_relist}
-\alias{relist_helper}
-\title{Helper functions for message catching lists}
+\title{Helper functions for catching lists}
 \usage{
 msg_catch_relist(x)
-
-relist_helper(x, x_subset, msg_label = NULL)
 }
 \arguments{
-\item{x}{an output from using \code{lapply()} and a \code{\link[=msg_catch]{msg_catch()}} function}
-
-\item{x_subset}{the name of the subset to make into a new list}
-
-\item{msg_label}{an optional character string to start each entry}
+\item{x}{the output from \code{lapply()} with \code{\link[=msg_catch]{msg_catch()}}. A list of lists of the form \code{list(res, warn = w, err = e)}}
 }
 \description{
 After a \code{\link[=msg_catch]{msg_catch()}} product function has been used with \code{lapply()},
 the results, warning, and errors can be resorted into separate lists.
 }
-\section{Functions}{
-\itemize{
-\item \code{relist_helper}: Helper for relisting
-
-A helper function that remakes a list based on a given subset name. Only used for message (warnings and errors).
-}}
-
