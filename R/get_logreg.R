@@ -15,7 +15,7 @@
 #' Suitable for usage with [msg_catch_lapply()].
 #'
 #' @export
-get_lr_stats <- function(x, y, df, n = 0) {
+get_logreg <- function(x, y, df, n = 0) {
   fit <- glm(
     make_pc_formula(y = y, x = x, n = n),
     family = "binomial",
