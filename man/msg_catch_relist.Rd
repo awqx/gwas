@@ -2,7 +2,7 @@
 % Please edit documentation in R/msg_catch_relist.R
 \name{msg_catch_relist}
 \alias{msg_catch_relist}
-\title{Helper functions for catching lists}
+\title{Helper functions for message catching lists}
 \usage{
 msg_catch_relist(x)
 }

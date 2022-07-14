@@ -16,6 +16,11 @@
 #'
 #' @export
 msg_catch_lapply <- function(X, FUN, ...) {
+	if(sum(is.null(names(X))) > 0) {
+	  message("All elements need to be named. Attempting to label.\n")
+	  X <- make_temp_labels(X)
+	}
+
   fun_list <- lapply(X = X, FUN = msg_catch(FUN), ...) %>%
     msg_catch_relist()
   fun_list$res <- do.call(rbind, fun_list$res)

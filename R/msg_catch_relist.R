@@ -1,4 +1,4 @@
-#' Helper functions for catching lists
+#' Helper functions for message catching lists
 #'
 #' After a [msg_catch()] product function has been used with `lapply()`,
 #' the results, warning, and errors can be resorted into separate lists.
@@ -8,8 +8,8 @@
 #' @export
 msg_catch_relist <- function(x) {
 	if(sum(is.null(names(x))) > 0) {
-	 message("All elements need a name.")
-	 NULL
+	  message("ERROR - Not all elements named.")
+	  NULL
 	}
 
 	res_list  <- lapply(x, function(z) z[[1]])
